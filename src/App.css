@@ -1,38 +1,339 @@
-.App {
+/* Ensure body and html fill the full height of the viewport */
+html, body {
+  height: 100%; /* Ensure full viewport height */
+  margin: 0;    /* Remove default margin */
+  padding: 0;   /* Remove default padding */
+}
+
+/* Root container to ensure the footer stays at the bottom */
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height */
+}
+
+/* Add background image to the body */
+body {
+  background: url('https://alvarotrigo.com/blog/assets/imgs/2021-12-27/movies-website-templates-examples.jpeg') no-repeat center center fixed;
+  background-size: cover; /* Make sure the background covers the whole screen */
+  color: #fff; /* Ensure the text is readable if the background is dark */
+  margin: 0;
+  padding: 0;
+}
+
+/* Content container */
+.container {
+  flex: 1; /* Ensures content area expands to fill available space */
+}
+
+/* Footer */
+.movie-footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* AppNavbar */
+
+.app-navbar {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('https://example.com/your-movie-background.jpg') no-repeat center center;
+    background-size: cover;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    color: white !important;
+    text-transform: uppercase;
+    margin-right: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffcc00 !important;
+}
+
+.nav-button {
+    background-color: #28a745; /* Green color */
+    color: #fff; /* Ensure the text is readable on the green background */
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #218838; /* Darker green shade on hover */
+    transform: scale(1.05);
+}
+
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+/* Add a simple animation to background when navbar is hovered */
+.app-navbar:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('https://example.com/your-movie-background.jpg') no-repeat center center;
+}
+
+
+/*Home Page*/
+
+/* Hero Section */
+.hero-section {
+  background-image: url('https://via.placeholder.com/1500x800?text=Hero+Background');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+  transform: scale(1.1);
+}
+
+/* Featured Movies Section */
+.featured-movies {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Movie Categories Section */
+.movie-categories {
+  padding: 60px 0;
+  background-color: #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.category-card {
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.category-card:hover {
+  transform: scale(1.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.category-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.category-button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #e6b800;
+}
+
+/* Footer */
+.movie-footer {
+  background-color: #333;
   color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Apply a background to the whole movie homepage */
+.movie-homepage {
+  background: url('https://static.vecteezy.com/system/resources/previews/043/555/242/non_2x/realistic-3d-cinema-film-strip-in-perspective-isolated-on-blue-background-template-cinema-festival-movie-design-cinema-film-strip-for-ad-poster-presentation-show-brochure-banner-or-flyer-vector.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff; /* Ensure the text is readable on dark backgrounds */
+  padding-top: 80px; /* Add padding to account for navbar height */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Hero section background */
+/* Hero Section */
+.hero-section {
+  background-image: url('https://via.placeholder.com/1500x800?text=Hero+Background');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff7f00; /* Orange color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 127, 0, 0.8); /* Added glow effect */
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #ff9f00; /* Lighter orange color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 159, 0, 0.7); /* Added glow effect */
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+  transform: scale(1.1);
+}
+
+
+/* Featured Movies Section */
+.featured-movies {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Movie Categories Section */
+.movie-categories {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.category-card {
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.category-card img:hover {
+  transform: scale(1.05);
+}
+
+.category-button {
+  background-color: #ff6347; /* Match with CTA button */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #e53e3e;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+  }
+
+  .category-card img {
+    height: 180px; /* Adjust category images on smaller screens */
   }
 }
