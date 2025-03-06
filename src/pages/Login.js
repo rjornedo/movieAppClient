@@ -83,7 +83,7 @@ export default function Login() {
                 });
 
                 // Redirect the user to /workouts after setting user details
-                navigate("/workouts");
+                navigate("/movies");
             });
         }
 

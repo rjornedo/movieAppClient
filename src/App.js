@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import AppNavbar from './components/AppNavbar';
+import AdminView from './components/AdminView';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
 import MovieDetails from './components/MovieDetails';
@@ -61,6 +62,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="/addMovie" element={<AdminView />} />
             <Route path="/movies" element={<Movie />} />
             <Route path="/movies/getMovie/:movieId" element={<MovieDetails />} />
             <Route path="/register" element={<Register />} />

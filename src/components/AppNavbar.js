@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { FaFilm, FaSearch, FaUserCircle, FaHome } from 'react-icons/fa';
 import UserContext from "../context/UserContext";
 import '../App.css'; // Import the custom CSS file for styling
@@ -29,8 +29,10 @@ export default function AppNavbar() {
                             Movies <FaSearch />
                         </Nav.Link>
 
-                        {user.id ? (
+                        {(user.id !== null) ? 
                             <>
+                                {user.isAdmin && (<Nav.Link as={NavLink} to="/addMovie">Dashboard</Nav.Link>)}
+
                                 <Nav.Link as={Link} to="/profile" className="nav-link">
                                     <FaUserCircle /> Profile
                                 </Nav.Link>
@@ -38,11 +40,11 @@ export default function AppNavbar() {
                                     Logout
                                 </Button>
                             </>
-                        ) : (
+                         : 
                             <Button as={Link} to="/login" className="nav-button">
                                 Login
                             </Button>
-                        )}
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>
