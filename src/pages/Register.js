@@ -43,7 +43,7 @@ export default function Register() {
                 <Card className="p-4 shadow-lg register-card">
                     <Card.Body>
                         <h2 className="text-center mb-4 fw-bold">Create an Account</h2>
-                        <p className="text-center text-muted">Explore the world of movies with us!</p>
+                        <p className="text-center text-white">Explore the world of movies with us!</p>
                         {error && <p className="text-danger text-center">{error}</p>}
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3">

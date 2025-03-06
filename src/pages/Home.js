@@ -24,69 +24,73 @@ const MovieHomePage = () => {
       <section className="featured-movies">
         <h2 className="section-title">Featured Movies</h2>
         <Carousel>
+       <Carousel.Item>
+         <div className="video-container" style={{ display: 'flex', justifyContent: 'center' }}>
+           <iframe 
+             width="560" 
+             height="315" 
+             src="https://www.youtube.com/embed/9sLQaR0TpvM?si=hkByxY5t0jz3CEAp" 
+             title="YouTube video player" 
+             frameBorder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+             referrerPolicy="strict-origin-when-cross-origin" 
+             allowFullScreen>
+           </iframe>
+         </div>
+         <Carousel.Caption>
+           <h3>Halloween Special</h3>
+           <p>Watch the latest trailer.</p>
+         </Carousel.Caption>
+       </Carousel.Item>
+
+          {/* Second Slide - YouTube Video */}
           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://via.placeholder.com/1500x600?text=Movie+1"
-              alt="First slide"
-            />
+            <div className="video-container" style={{ display: 'flex', justifyContent: 'center' }}>
+              <iframe 
+                width="560" 
+                height="315" src="https://www.youtube.com/embed/Fa8_Vh1Yn6E?si=PDcfFcry8urIwMYl"
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen></iframe>
+            </div>
             <Carousel.Caption>
-              <h3>Movie Title 1</h3>
-              <p>Some description about Movie 1.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://via.placeholder.com/1500x600?text=Movie+2"
-              alt="Second slide"
-            />
-            <Carousel.Caption>
-              <h3>Movie Title 2</h3>
-              <p>Some description about Movie 2.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://via.placeholder.com/1500x600?text=Movie+3"
-              alt="Third slide"
-            />
-            <Carousel.Caption>
-              <h3>Movie Title 3</h3>
-              <p>Some description about Movie 3.</p>
+              <h3>Cover #1</h3>
+              <p>Watch the latest trailer.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </section>
 
       {/* Movie Categories Section */}
-      <section className="movie-categories">
-        <h2 className="section-title">Browse by Category</h2>
-        <Row>
-          <Col xs={12} md={4}>
-            <div className="category-card">
-              <img src="https://via.placeholder.com/300x200?text=Action" alt="Action Movies" />
-              <h3>Action</h3>
-              <Button as={Link} to="/action" className="category-button">Explore</Button>
-            </div>
-          </Col>
-          <Col xs={12} md={4}>
-            <div className="category-card">
-              <img src="https://via.placeholder.com/300x200?text=Comedy" alt="Comedy Movies" />
-              <h3>Comedy</h3>
-              <Button as={Link} to="/comedy" className="category-button">Explore</Button>
-            </div>
-          </Col>
-          <Col xs={12} md={4}>
-            <div className="category-card">
-              <img src="https://via.placeholder.com/300x200?text=Drama" alt="Drama Movies" />
-              <h3>Drama</h3>
-              <Button as={Link} to="/drama" className="category-button">Explore</Button>
-            </div>
-          </Col>
-        </Row>
-      </section>    
+
+<section className="movie-categories">
+  <h2 className="section-title">Browse by Category</h2>
+  <Row>
+    <Col xs={12} md={4}>
+      <div className="category-card interactive-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9LBHpDDM202VdP_TI7m55Glh5Npz-4GvhvQ&s" alt="Action Movies" />
+        <h3>Action</h3>
+        <Button as={Link} to="/action" className="category-button">Explore</Button>
+      </div>
+    </Col>
+    <Col xs={12} md={4}>
+      <div className="category-card interactive-card">
+        <img src="https://i.guim.co.uk/img/media/5f2bdaed5f7ba49681d32ee8b67df5d37c16c176/0_0_2203_3543/master/2203.jpg?width=700&quality=85&auto=format&fit=max&s=58373f6ce2fbcb0b40918a13c95b579c" alt="Comedy Movies" />
+        <h3>Comedy</h3>
+        <Button as={Link} to="/comedy" className="category-button">Explore</Button>
+      </div>
+    </Col>
+    <Col xs={12} md={4}>
+      <div className="category-card interactive-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BODY2YWYwM2YtZTVlNC00MjgyLTgzYTgtNmFmYWE5ZmY1MDM5XkEyXkFqcGc@._V1_.jpg" alt="Drama Movies" />
+        <h3>Drama</h3>
+        <Button as={Link} to="/drama" className="category-button">Explore</Button>
+      </div>
+    </Col>
+  </Row>
+</section>
     </div>
   );
 };

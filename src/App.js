@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import AppNavbar from './components/AppNavbar';
 import Home from './pages/Home';
+import Movie from './pages/Movie';
+import MovieDetails from './components/MovieDetails';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Register from './pages/Register';
@@ -51,6 +53,7 @@ function App() {
 
   return (
     <UserProvider value={{ user, setUser, unsetUser }}>
+      {/* Changed BrowserRouter to HashRouter */}
       <Router>
         <AppNavbar />
         <Container>
@@ -58,6 +61,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="/movies" element={<Movie />} />
+            <Route path="/movies/getMovie/:movieId" element={<MovieDetails />} />
             <Route path="/register" element={<Register />} />
           </Routes>
         </Container>

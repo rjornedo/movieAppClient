@@ -37,7 +37,7 @@ body {
 
 /* AppNavbar */
 
-.app-navbar {
+.navbar {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('https://example.com/your-movie-background.jpg') no-repeat center center;
     background-size: cover;
     transition: background 0.3s ease-in-out;
@@ -336,4 +336,302 @@ body {
   .category-card img {
     height: 180px; /* Adjust category images on smaller screens */
   }
+}
+
+
+.movie-categories {
+  text-align: center;
+  padding: 2rem;
+  background-color: yellow;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.category-button {
+  background-color: #ff9800;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  color: white;
+  transition: background 0.3s ease-in-out;
+}
+
+.category-button:hover {
+  background-color: #e68900;
+  color: white;
+}
+
+
+/* Login Page Styling */
+.login-container {
+  background: url('https://wallpapercave.com/wp/wp4056410.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-card h2 {
+  color: #FFD700; /* Gold text to match movie theme */
+}
+
+.login-card .form-label {
+  color: #ddd;
+}
+
+.login-card .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid #FFD700;
+}
+
+.login-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-card .form-control:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+.login-card .btn-primary {
+  background-color: #FFD700;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-card .btn-primary:hover {
+  background-color: #FFA500; /* Darker gold effect */
+  transform: scale(1.05);
+}
+
+.login-card p a {
+  color: #FFD700;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-card p a:hover {
+  color: #FFA500;
+}
+
+/* Register Page Styling */
+.register-container {
+  background: url('https://wallpapercave.com/wp/wp4056422.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.register-card h2 {
+  color: #FFD700; /* Gold text to match movie theme */
+}
+
+.register-card .form-label {
+  color: #ddd;
+}
+
+.register-card .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid #FFD700;
+}
+
+.register-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.register-card .form-control:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+.register-card .btn-primary {
+  background-color: #FFD700;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.register-card .btn-primary:hover {
+  background-color: #FFA500; /* Darker gold effect */
+  transform: scale(1.05);
+}
+
+.register-card p a {
+  color: #FFD700;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.register-card p a:hover {
+  color: #FFA500;
+}
+
+.movie-title {
+    color: #8B0000; /* Dark red */
+    font-size: 6rem; /* Enlarged text */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.movie-card {
+    background-color: #5D4037; /* Warm Brown - Complements Yellow */
+    color: #fff; /* White text for contrast */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFEB3B; /* Bright Yellow - Readable on Brown */
+}
+
+.movie-card .card-text {
+    font-size: 0.9rem;
+    color: #FFF9C4; /* Soft Yellow - Easy to read */
+}
+
+/* Movie Details Page Layout */
+.movie-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height */
+    padding: 20px;
+}
+
+/* Movie Details Page Layout */
+.movie-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    padding: 20px;
+}
+
+/* Adjust Card Styling */
+.movie-cards {
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px; /* Ensures height occupies space */
+    background: url('https://static.vecteezy.com/system/resources/previews/043/555/242/non_2x/realistic-3d-cinema-film-strip-in-perspective-isolated-on-blue-background-template-cinema-festival-movie-design-cinema-film-strip-for-ad-poster-presentation-show-brochure-banner-or-flyer-vector.jpg') 
+        no-repeat center center;
+    background-size: cover;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    
+    /* Ensure it fully centers */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    height: 80vh; /* Adjusts to occupy 80% of the viewport height */
+}
+
+/* Ensure Card Body centers its content */
+.movie-cards .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Make sure it takes full height */
+    width: 100%;
+}
+
+/* Enlarged Title and Description */
+.movie-cards .card-title {
+    font-size: 2rem; /* Larger title */
+    font-weight: bold;
+    margin-bottom: 15px; /* Add spacing */
+}
+
+.movie-cards .card-text {
+    font-size: 1.3rem; /* Larger description */
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Center the Button */
+.movie-cards .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .movie-cards {
+        padding: 20px;
+        max-width: 95%;
+        height: auto; /* Adjust height for smaller screens */
+    }
+    
+    .movie-cards .card-title {
+        font-size: 1.6rem;
+    }
+
+    .movie-cards .card-text {
+        font-size: 1rem;
+    }
 }

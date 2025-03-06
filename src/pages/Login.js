@@ -94,7 +94,7 @@ export default function Login() {
                 <Card className="p-4 shadow-lg login-card">
                     <Card.Body>
                         <h2 className="text-center mb-4 fw-bold">Welcome Back!</h2>
-                        <p className="text-center text-muted">Login to enjoy your favorite movies</p>
+                        <p className="text-center text-white">Login to enjoy your favorite movies</p>
                         <Form onSubmit={authenticate}>
                             <Form.Group className="mb-3">
                                 <Form.Label>Email Address</Form.Label>
